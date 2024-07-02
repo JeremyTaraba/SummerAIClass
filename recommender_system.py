@@ -17,4 +17,4 @@ my_ideal_game = [9,1,1,9,0]
 weights_list = [100,1,50,100,1]
 recommendation_model = svm.SVC()
 recommendation_model.fit(games_score_list, games_list,weights_list)
-print(recommendation_model.predict([ my_ideal_game]))
+print(recommendation_model.predict([ my_ideal_game]))   
