@@ -1,6 +1,8 @@
-from sklearn import linear_model
+from sklearn.linear_model import Ridge
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.pipeline import make_pipeline
 # day, time
-input_data = [
+day_and_time = [
   [1, 9],
   [1, 10],
   [1, 11],
@@ -20,8 +22,9 @@ input_data = [
 ]
 
 # wait times for the day, time
-output_data = [0,10,20,30,40,30,20,10,0,20,40,60,80,60,40,20]
+wait_time = [0,10,20,30,40,30,20,10,0,20,40,60,80,60,40,20]
 
-model = linear_model.LinearRegression()
-model.fit(input_data, output_data)
-print(model.predict([[1,9]]))
+# model = linear_model.LinearRegression()
+model = make_pipeline(PolynomialFeatures(2), Ridge()) 
+model.fit(day_and_time, wait_time)
+print(model.predict([[3,12]]))
