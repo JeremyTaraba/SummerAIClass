@@ -1,0 +1,37 @@
+#rock-button{
+    /* background-color: grey !important; */
+    background-image: url('rock.jpg');
+}
+
+#paper-button{
+    /* background-color: rgb(92, 173, 220) !important; */
+    background-image: url('paper.jpg');
+}
+
+#scissor-button{
+    /* background-color: rgb(228, 76, 76) !important; */
+    background-image: url('scissor.jpg');
+}
+
+button {
+    color:aliceblue;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16;
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+}
+
+.spacer {
+    padding-bottom: 10px;
+}
+
+.center{
+    text-align: center;
+    display: block;
+    margin: auto;
+
+}

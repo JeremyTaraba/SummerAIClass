@@ -37,7 +37,8 @@ def play(user_move):
         
     comp = compPlayer()
     user = int(user_move)
-
+    comp_name = ""
+    user_name = ""
     
     
         
@@ -84,6 +85,21 @@ def play(user_move):
         print("the computer chose scissors")
         Result = "It's a tie!!"
         # total_ties +=1
+    
+    if comp == 1:
+        comp_name = "Rock"
+    elif comp == 2:
+        comp_name = "Paper"
+    else:
+        comp_name = "Scissors"
+    
+    if user == 1:
+        user_name = "Rock"
+    elif user == 2:
+        user_name = "Paper"
+    else:
+        user_name = "Scissors"
+
 
     # if i != 4:
     #     print("Updating the training model...")
@@ -94,7 +110,7 @@ def play(user_move):
 
     #     model.fit(input_data,output_data)
     #     print("Finished updating the training model")
-    message = "You played: " + str(user) + " and the computer played: " + str(comp) +"The result is : " + Result
+    message = "You played: " + user_name + " and the computer played: " + comp_name +" The result is : " + Result
     return jsonify(message)
             
 
