@@ -1,28 +1,66 @@
 #rock-button{
     /* background-color: grey !important; */
-    background-image: url('rock.jpg');
+    background-image: url('Rock.jpg');
 }
 
 #paper-button{
     /* background-color: rgb(92, 173, 220) !important; */
-    background-image: url('paper.jpg');
+    background-image: url('Paper.jpg');
 }
 
 #scissor-button{
     /* background-color: rgb(228, 76, 76) !important; */
-    background-image: url('scissor.jpg');
+    background-image: url('Scissors.jpg');
 }
 
+#inline{
+    display: inline-block;
+    padding-right: 30px;
+}
+
+
+
+body {
+    background: white ;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
 button {
-    color:aliceblue;
-    border: none;
+    background-color: white;
+    border: black !important;
+    border-width: 2px;
     padding: 10px 20px;
     font-size: 16;
     margin: 10px;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     width: 300px;
     height: 300px;
+    transition-duration: 0.4s;
+}
+
+.reset{
+    background-color: red;
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    transition-duration: 0.4s;
+}
+
+.reset:hover{
+  background-color: red; /* Green */
+  opacity: 100%;
+  color: white;
+  box-shadow: 0 10px 12px 0 rgba(0,0,0,0.24), 0 12px 30px 0 rgba(0,0,0,0.19);
+}
+
+
+button:hover{
+    opacity: 90%;
+    box-shadow: 0 5px 6px 0 rgba(0,0,0,0.24), 0 6px 10px 0 rgba(0,0,0,0.19);
 }
 
 .spacer {
