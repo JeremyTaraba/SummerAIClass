@@ -3,7 +3,7 @@ async function playGame(userMove) {
     var summary = document.getElementById("summary");
   
     try {
-      var response = await fetch("https://tinyurl.com/47prur4u/play", {
+      var response = await fetch("http://127.0.0.1:5000/play", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -34,7 +34,7 @@ async function playGame(userMove) {
     var result = document.getElementById("result");
   
     try {
-      var response = await fetch("https://tinyurl.com/47prur4u/reset", {
+      var response = await fetch("http://127.0.0.1:5000/reset", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
