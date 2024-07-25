@@ -5,16 +5,16 @@ from mtranslate import translate
 from PIL import Image
 
 
-text = "hola"
-translated_text = translate(text, "en")
-print(translated_text)
+# text = "hola"
+# translated_text = translate(text, "en")
+# print(translated_text)
 
-speech = gTTS(text = translated_text, lang = "en", slow = False, tld="com.au")
-speech.save("translated.mp3")
+# speech = gTTS(text = translated_text, lang = "en", slow = False, tld="com.au")
+# speech.save("translated.mp3")
 
 
 # Load the image using OpenCV
-image = cv2.imread("test.jpeg")
+image = cv2.imread("hello.png")
 
 # Perform text detection
 text = pytesseract.image_to_string(image)
