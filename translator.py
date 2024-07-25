@@ -12,22 +12,21 @@ print(translated_text)
 speech = gTTS(text = translated_text, lang = "en", slow = False, tld="com.au")
 speech.save("translated.mp3")
 
-# # Path to the Tesseract OCR executable
-# pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
-# # Load the image using OpenCV
-# image = cv2.imread("test.jpeg")
 
-# # Perform text detection
-# text = pytesseract.image_to_string(image)
+# Load the image using OpenCV
+image = cv2.imread("test.jpeg")
 
-# # Print the detected text
-# print(text)
+# Perform text detection
+text = pytesseract.image_to_string(image)
 
-# # Translate text
-# translated_text = translate(text, "en")
+# Print the detected text
+print(text)
 
-# # Print the translated text
-# print(translated_text)
+# Translate text
+translated_text = translate(text, "en")
+
+# Print the translated text
+print(translated_text)
 
 # # Convert translated text to audio
 # speech = gTTS(text = translated_text, lang = "en", slow = False)
